@@ -1,0 +1,6 @@
+-- from @etdvprg
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180401230005, "De Silva", "Ana Gabriela", "V" , "Rua do Herval, Cristo Rei, Curitiba, Paraná, Brazil", "Amapola St., Bel-Air Village, Makati", 09159078348, "dsanagab.intl.faculty@yuste.edu.com.ph", "1980-8-19", "AB", "2018-8-26");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120200201190018, "Bari", "Abdul", "S", "Abid Ali Road, Hyderabad, Telangana, India", "Quirino Avenue Ext., Paco, Manila", 09123471945, "abaris.intl.faculty@yuste.edu.com.ph", "1965-02-10", "CICS", "2020-03-14");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120100309260010, "Camacho", "Jhon Mhiguel", "Z", "Nuvali Boulevard, Don Jose, Santa Rosa, Laguna", "Padre Noval, Sampaloc, Manila", 09789218374, "jhnmgc.cfad.faculty@yuste.edu.com.ph", "1979-11-11", "CFAD", "2010-08-23");
+
+-- from @Vladifish
