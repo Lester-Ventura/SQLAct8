@@ -1,5 +1,5 @@
 CREATE TABLE equipment(
-    equipment_id INT AUTO_INCREMENT,
+    equipment_id VARCHAR(10) NOT NULL,
     equipment_type VARCHAR(100) NOT NULL,
     acquisition_year INT, 
 	total_quantity INT NOT NULL,
