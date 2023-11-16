@@ -11,6 +11,6 @@ INSERT INTO student (student_id, last_name, first_name, middle_initial, permanen
 
 
 -- from @miggy-v
-
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES ("020220410010004", "Dela Cruz", "Juan", "A", "Gomez St., San Juan, Taytay, Rizal", "Arellano Ave., Beverly Hills, Antipolo City",  "09162344567", "juanpogi123@yahoo.com", "2003-12-19", "BSCS", 2022);
 
 -- from @casscodes220
