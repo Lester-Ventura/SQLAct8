@@ -147,7 +147,7 @@ WHERE equipment_type = "Mouse";
 SELECT * FROM equipment 
 WHERE equipment_type = "Speaker";
 /*8*/
-INSERT INTO room (room_code, max_capacity, room_type) VALUES ("122", "50", 'Multimedia');
+INSERT INTO room (room_id, max_capacity, room_type) VALUES ("122", "50", 'Multimedia');
 
 /*9*/
 /*17*/
