@@ -1,2 +1,10 @@
--- need 9 more INSERT
-INSERT INTO room (room_id, max_capacity, room_type) VALUES ("122", "50", 'Multimedia');
+INSERT INTO room (room_id, max_capacity, room_type) VALUES (101,30,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (102,35,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (103,50,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (104,45,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (105,40,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (106,60,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (107,65,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (108,70,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
