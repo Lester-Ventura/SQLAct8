@@ -81,35 +81,18 @@ CREATE TABLE borrow (
 );
 /*1f*/
 CREATE TABLE room (
-    room_id INT NOT NULL,
+    room_id VARCHAR(15) NOT NULL,
     max_capacity INT NOT NULL,
     room_type ENUM("Multimedia", "Discussion") NOT NULL,
     PRIMARY KEY(room_id)
 );
-/*1f*/
- CREATE TABLE room_usage (
-	usage_id INT AUTO_INCREMENT,
-	room_id INT NOT NULL,
-	user_id VARCHAR(15) NOT NULL,
-	start_timestamp DATETIME NOT NULL,
-	end_timestamp DATETIME,
-    PRIMARY KEY(usage_id),
-	FOREIGN KEY(room_id)
-			REFERENCES room(room_id)
-			ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(user_id)
-			REFERENCES student(student_id)
-			ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(user_id)
-			REFERENCES instructor(instructor_id)
-			ON DELETE CASCADE ON UPDATE CASCADE
-);
+
 /*2*/
 INSERT INTO student (student_id, last_name, first_name, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220319000001, "Cruzat", "Slaybells Batumbakal", "Consunji St., San Jose, City of San Fernando, Pampanga", "Padre Rada St., Tondo, Manila", 09060938294, "cruzat.slaybellsbatumbakal.student@yuste.edu", "2003-12-19", "BSCS", 2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220410110002, "Dough", "Jongin", "K", "Cadena de Amor St., Pembo, Taguig", "J. Luna, Matandang Balara, Quezon City", 09089923673, "dough.jongin.student@yuste.edu", "2004-01-03", "BSCS", 2022)
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220410010003, "Dela Cruz", "Juan", "A", "Gomez St., San Juan", "Taytay, Rizal",  09162344567, "juan.delacruz.student@yuste.edu", "2003-12-19", "BSCS", 2022)
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220410010004, "Dela Cruz", "Juan", "A", "Gomez St., San Juan, Taytay, Rizal",  09162344567, "ja.delacruz.student@yuste.edu", "2003-12-19", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221114030004, "Kim", "Nayeongyu", "C", "Balantang Road, Jaro, Iloilo City, Iloilo", "Filinvest Ave., Alabang, Muntinlupa", 09009533694, "kimkimmy.student@yuste.edu", "2004-02-16", "BSCS", 2022)
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221601110005, "Panganiban", "Axel Ronald", "K", "Vista Verde Ave., Santo Domingo", "Cainta, Rizal",  09163526325, "ark.panganiban.student@yuste.edu", "2002-10-26", "BSCS", 2022)
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020221601110006, "Panganiban", "Axel Ronald", "K", "Vista Verde Ave., Santo Domingo, Cainta, Rizal", 09163526325, "ark.panganiban.student@yuste.edu", "2002-10-26", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418070006,"Dan","Richardson","G","Jose St., Malibay, Pasay City","Mayapis St., Urdaneta, Makati City",09876954654,"dan.richardson.student@yuste.edu","2002-11-23","BSCS",2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221205050007,"Laif","Efil","E","Roxas Ave., Abuno, Iligan, Lanao del Norte","Leveriza St., Rosario, Pasay City",09543678234,"laif.efil.student@yuste.edu","2003-01-13","BSCS",2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418060008,"Descartes","Reyes","F","Don Jose St., Siena, Manila, Metro Manila","Luzuriaga St., Brgy. 12, Bacolod, Negros Occidental",09285649172,"descartes.reyes.student@yuste.edu","2002-10-04","BSCS",2022)
@@ -124,6 +107,25 @@ INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, pe
 /*4*/
 SELECT * FROM instructor i WHERE i.department = "CICS";
 /*5*/
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("GreatF19252007", "The Great Gatsby", "Fitzgerald", "Francis Scott", "1925-04-10", 2007, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("WhiteL19062010", "White Fang", "London", "Jack", "1906-05-01", 2010, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("BFGD19822009", "The BFG", "Dahl", "Roald", "1982-01-14", 2009, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("CallA20072021", "Call Me by Your Name", "Aciman", "André", "2007-01-23", 2021, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("JaneB18472006", "Jane Eyre", "Brontë", "Charlotte", "1847-10-19", 2006, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("TwoO19972021", "The Two Koreas", "Oberdorfer", "Don", "1997-10-5", 2021, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("QuantumK20232023", "Quantum Supremacy", "Kaku", "Michio", "2023-05-02", 2023, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("SymplecticL19872021", "Symplectic Geometry and Analytical Mathematics", "Libermann", "Paulette", "1987-03-31", 2021, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("KokoroN19131999", "Kokoro", "Natsume", "Soseki", "1914-08-11", 1999, 5)
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('MeinH19252020', 'Mein Kampf', 'Hitler', 'Adolf', '1925-07-18', 2020, 3);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('DasM18672020', 'Das Kapital', 'Marx', 'Karl', '1867-09-14', 2020, 6);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('TwilightM20052007', 'Twilight', 'Meyer', 'Stephanie', '2005-09-27', 2007, 25);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('SteelA20042020', 'Steel Ball Run', 'Araki', 'Hirohiko', '2004-01-19', 2020, 5);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('VentoA19952018', 'Vento Aureo', 'Araki', 'Hirohiko', '1995-12-11', 2018, 5);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('GameM19962012', 'A Game of Thrones', 'George R.R.', 'Martin', '1996-08-1', 2012, 33);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('ClashM19982013', 'A Clash of Kings', 'George R.R.', 'Martin', '1998-11-16', 2013, 28);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('StormM20002013', 'A Storm of Swords', 'George R.R.', 'Martin', '2000-08-08', 2013, 23);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('FeastM20052014', 'A Feast for Crows', 'George R.R.', 'Martin', '2005-10-17', 2014, 29);
+INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('DanceM20112014', 'A Dance with Dragons', 'George R.R.', 'Martin', '2011-07-12', 2014, 35);
 /*6*/
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-00100", "Vacuum", 1400, 40, "Hoover")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-02077", "Vacuum", 2077, 2, "Roomba")
@@ -147,7 +149,16 @@ WHERE equipment_type = "Mouse";
 SELECT * FROM equipment 
 WHERE equipment_type = "Speaker";
 /*8*/
-INSERT INTO room (room_id, max_capacity, room_type) VALUES ("122", "50", 'Multimedia');
+INSERT INTO room (room_id, max_capacity, room_type) VALUES (101,30,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (102,35,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (103,50,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (104,45,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (105,40,'Multimedia');
+INSERT into room (room_id, max_capacity, room_type) values (106,60,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (107,65,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (108,70,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion');
+INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
 
 /*9*/
 /*17*/
