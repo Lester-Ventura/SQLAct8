@@ -1,4 +1,5 @@
-\/*TableDroppersDeleters*/
+/*Ctrl +F Doesn't Work to find wrong queries*/
+/*TableDroppersDeleters*/
 delete student
 delete book
 delete borrow
@@ -64,8 +65,8 @@ CREATE TABLE borrow (
     borrow_id INT AUTO_INCREMENT,
     item_id VARCHAR(100) NOT NULL,
 	borrower_id VARCHAR(15) NOT NULL,
-	start_date DATE NOT NULL,
-	end_date DATE, 
+	start_date DATETIME NOT NULL,
+	end_date DATETIME, 
 	PRIMARY KEY(borrow_id)
 );
 /*1f*/
@@ -194,7 +195,7 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,1201
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00')
 /*12*/
 SELECT s.student_id, s.first_name as StudentName from student s 
-/*14*/
+/*14 Doesn't Work*/
 SELECT
 		s.student_id, 
 		S.first_name, 
@@ -205,7 +206,7 @@ FROM
 LEFT JOIN borrow bor on s.student_id = bor.borrower_id
 LEFT JOIN book b on bor.item_id = b.book_id
 group by s.student_id
-/*15 Test more once populated*/
+/*15 Doesn't Work*/
 SELECT
 i.instructor_id,
 i.last_name as instructor_ln,
@@ -228,8 +229,12 @@ WHERE department = "CICS";
 SELECT 
     rm.room_id,
     bor.borrower_id,
+    ins.first_name,
+    ins.last_name,
     bor.start_date
     FROM
     room rm
-    LEFT JOIN borrow bor on rm.room_id = bor.item_id
+    INNER JOIN borrow bor on rm.room_id = bor.item_id
+    left join instructor ins on bor.borrower_id = ins.instructor_id 
     order by rm.room_id
+  
