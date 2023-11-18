@@ -180,6 +180,18 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('SteelA2
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 120200201190027, '2022-11-25', '2022-11-27');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 120180401230027, '2022-11-27', '2022-11-29');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 119001713120000, '2022-11-29', '2022-12-01');
+/*10*/
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("VACM-02077", 120110520250010, '2022-11-02', '2022-12-01');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("OVEN-32145", 120100309260010, '2022-11-03', '2022-11-16');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("LNVO-27172", 120200201190027, '2022-11-04', '2022-11-20');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("LGTC-24123", 120180401230027, '2022-11-05', '2022-11-23');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("SJBL-42000", 119001713120000, '2022-11-06', '2022-11-24');
+/*11*/
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (101,120110520250010,'2022-11-02 11:00:00','2022-11-02 13:00:00')
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (102,120100309260010,'2022-11-03 09:00:00','2022-11-03 12:00:00')
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,120200201190027,'2022-11-04 14:00:00','2022-11-04 16:00:00')
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180401230027,'2022-11-05 15:00:00','2022-11-05 18:00:00')
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00')
 /*12*/
 SELECT s.student_id, s.first_name as StudentName from student s 
 /*14*/
