@@ -1,14 +1,11 @@
-/*All codes here are tested, Note: Ctrl+f # to find placeholder inserts, to be filled.*/
-/*TableDroppersDeleters*/
+\/*TableDroppersDeleters*/
 delete student
-delete room_usage
 delete book
 delete borrow
 delete instructor
 delete equipment
 delete room
 drop table borrow
-drop table room_usage
 drop table student
 drop table instructor
 drop table equipment
@@ -64,18 +61,12 @@ CREATE TABLE equipment(
 );
 /*1e*/
 CREATE TABLE borrow (
-    borrow_id int AUTO_INCREMENT,
+    borrow_id INT AUTO_INCREMENT,
     item_id VARCHAR(100) NOT NULL,
 	borrower_id VARCHAR(15) NOT NULL,
 	start_date DATE NOT NULL,
 	end_date DATE, 
-	PRIMARY KEY(borrow_id),
-	FOREIGN KEY(borrower_id)
-		REFERENCES student(student_id)
-		ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(borrower_id)
-		REFERENCES instructor(instructor_id)
-        ON DELETE CASCADE ON UPDATE cascade
+	PRIMARY KEY(borrow_id)
 );
 /*1f*/
 CREATE TABLE room (
@@ -88,9 +79,9 @@ CREATE TABLE room (
 /*2*/
 INSERT INTO student (student_id, last_name, first_name, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220319000001, "Cruzat", "Slaybells Batumbakal", "Consunji St., San Jose, City of San Fernando, Pampanga", "Padre Rada St., Tondo, Manila", 09060938294, "cruzat.slaybellsbatumbakal.student@yuste.edu", "2003-12-19", "BSCS", 2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220410110002, "Dough", "Jongin", "K", "Cadena de Amor St., Pembo, Taguig", "J. Luna, Matandang Balara, Quezon City", 09089923673, "dough.jongin.student@yuste.edu", "2004-01-03", "BSCS", 2022)
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220410010004, "Dela Cruz", "Juan", "A", "Gomez St., San Juan, Taytay, Rizal",  09162344567, "ja.delacruz.student@yuste.edu", "2003-12-19", "BSCS", 2022);
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220410010003, "Dela Cruz", "Juan", "A", "Gomez St., San Juan, Taytay, Rizal",  09162344567, "ja.delacruz.student@yuste.edu", "2003-12-19", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221114030004, "Kim", "Nayeongyu", "C", "Balantang Road, Jaro, Iloilo City, Iloilo", "Filinvest Ave., Alabang, Muntinlupa", 09009533694, "kimkimmy.student@yuste.edu", "2004-02-16", "BSCS", 2022)
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020221601110006, "Panganiban", "Axel Ronald", "K", "Vista Verde Ave., Santo Domingo, Cainta, Rizal", 09163526325, "ark.panganiban.student@yuste.edu", "2002-10-26", "BSCS", 2022);
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020221601110005, "Panganiban", "Axel Ronald", "K", "Vista Verde Ave., Santo Domingo, Cainta, Rizal", 09163526325, "ark.panganiban.student@yuste.edu", "2002-10-26", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418070006,"Dan","Richardson","G","Jose St., Malibay, Pasay City","Mayapis St., Urdaneta, Makati City",09876954654,"dan.richardson.student@yuste.edu","2002-11-23","BSCS",2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221205050007,"Laif","Efil","E","Roxas Ave., Abuno, Iligan, Lanao del Norte","Leveriza St., Rosario, Pasay City",09543678234,"laif.efil.student@yuste.edu","2003-01-13","BSCS",2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418060008,"Descartes","Reyes","F","Don Jose St., Siena, Manila, Metro Manila","Luzuriaga St., Brgy. 12, Bacolod, Negros Occidental",09285649172,"descartes.reyes.student@yuste.edu","2002-10-04","BSCS",2022)
@@ -101,7 +92,7 @@ INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, pe
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180401230027, "De Silva", "Ana Gabriela", "V","Rua do Herval, Cristo Rei, Curitiba, Paraná, Brazil", "Amapola St., Bel-Air Village, Makati", 09159078348, "dsanagab.intl.faculty@yuste.edu.com.ph", "1980-8-19", "AB", "2018-8-26")
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120200201190027, "Bari", "Abdul", "S", "Abid Ali Road, Hyderabad, Telangana, India", "Quirino Avenue Ext., Paco, Manila", 09123471945, "abaris.intl.faculty@yuste.edu.com.ph", "1965-02-10", "CICS", "2020-03-14")
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120100309260010, "Camacho", "Jhon Mhiguel", "Z", "Nuvali Boulevard, Don Jose, Santa Rosa, Laguna", "Padre Noval, Sampaloc, Manila", 09789218374, "jhnmgc.cfad.faculty@yuste.edu.com.ph", "1979-11-11", "CFAD", "2010-08-23")
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120100520250010, "Epsilon", "Theta", "Y", "Abad Santos Ave., Bagumbayan, Tacurong, Sultan Kudarat", "Zaldivar St., San Jose de Buenavista, San Jose, Antique", 09789218374, "epstheta.eng.faculty@yuste.edu.com.ph", "1979-11-11", "ENG", "2010-08-23");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120110520250010, "Epsilon", "Theta", "Y", "Abad Santos Ave., Bagumbayan, Tacurong, Sultan Kudarat", "Zaldivar St., San Jose de Buenavista, San Jose, Antique", 09789218374, "epstheta.eng.faculty@yuste.edu.com.ph", "1979-12-11", "ENG", "2011-08-23");
 /*4*/
 SELECT * FROM instructor i WHERE i.department = "CICS";
 /*5*/
@@ -124,6 +115,7 @@ INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_n
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('StormM20002013', 'A Storm of Swords', 'George R.R.', 'Martin', '2000-08-08', 2013, 23);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('FeastM20052014', 'A Feast for Crows', 'George R.R.', 'Martin', '2005-10-17', 2014, 29);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('DanceM20112014', 'A Dance with Dragons', 'George R.R.', 'Martin', '2011-07-12', 2014, 35);
+
 /*6*/
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-00100", "Vacuum", 1400, 40, "Hoover")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-02077", "Vacuum", 2077, 2, "Roomba")
@@ -157,7 +149,6 @@ INSERT into room (room_id, max_capacity, room_type) values (107,65,'Discussion')
 INSERT into room (room_id, max_capacity, room_type) values (108,70,'Discussion');
 INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion');
 INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
-
 /*9*/
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020220319000001, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('BFGD19822009', 020220410110002, '2022-10-19', '2022-10-22');
@@ -189,6 +180,31 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('SteelA2
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 120200201190027, '2022-11-25', '2022-11-27');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 120180401230027, '2022-11-27', '2022-11-29');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 119001713120000, '2022-11-29', '2022-12-01');
+/*12*/
+SELECT s.student_id, s.first_name as StudentName from student s 
+/*14*/
+SELECT
+		s.student_id, 
+		S.first_name, 
+		S.last_name,
+		COUNT(*) AS TotalBorrowedBooks
+FROM
+	Student s
+LEFT JOIN borrow bor on s.student_id = bor.borrower_id
+LEFT JOIN book b on bor.item_id = b.book_id
+group by s.student_id
+/*15 Test more once populated*/
+SELECT
+i.instructor_id,
+i.last_name as instructor_ln,
+i.first_name as instructor_fn,
+COUNT(bor.item_id) as borrow_count
+FROM 
+	Instructor i
+	LEFT JOIN borrow bor on i.instructor_id = bor.item_id
+	LEFT JOIN book on bor.item_id = book.book_id
+GROUP BY i.instructor_id
+
 
 /*17*/
 UPDATE instructor 
@@ -196,3 +212,12 @@ SET department = "CICS"
 WHERE instructor_id = "120100309260010";
 SELECT * FROM instructor 
 WHERE department = "CICS";
+/*18*/
+SELECT 
+    rm.room_id,
+    bor.borrower_id,
+    bor.start_date
+    FROM
+    room rm
+    LEFT JOIN borrow bor on rm.room_id = bor.item_id
+    order by rm.room_id
