@@ -159,6 +159,37 @@ INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion')
 INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
 
 /*9*/
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020220319000001, '2022-10-19', '2022-10-22');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('BFGD19822009', 020220410110002, '2022-10-19', '2022-10-22');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('JaneB18472006', 020220410110002, '2022-10-22', '2022-10-25');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('WhiteL19062010', 020220319000001, '2022-10-22', '2022-10-26');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('WhiteL19062010', 020220410110002, '2022-10-23', '2022-10-26');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 020220410010003, '2022-10-24', '2022-10-26');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('KokoroN19131999', 020220410010003, '2022-10-24', '2022-10-26');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('QuantumK20232023', 020220713210009, '2022-10-25', '2022-10-28');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('SteelA20042020', 020220713210009, '2022-10-25', '2022-10-28');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 020220713210009, '2022-10-25', '2022-10-28');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020221114030004, '2022-10-26', '2022-10-29');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020221114030004, '2022-10-26', '2022-10-29');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('DanceM20112014', 020221114030004, '2022-10-26', '2022-10-29');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020221601110005, '2022-11-01', '2022-11-05');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('DanceM20112014', 020221601110005, '2022-11-01', '2022-11-05');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('QuantumK20232023', 020221601110005, '2022-11-01', '2022-11-05');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('DanceM20112014', 020220418070006, '2022-11-06', '2022-11-09');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020220418070006, '2022-11-06', '2022-11-09');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020220418070006, '2022-11-06', '2022-11-09');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('DanceM20112014', 020221205050007, '2022-11-09', '2022-10-15');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('SteelA20042020', 020221205050007, '2022-11-09', '2022-10-15');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020220418060008, '2022-11-15', '2022-11-17');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 020220418060008, '2022-11-12', '2022-11-15');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 020220124200010, '2022-11-15', '2022-11-18');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020220124200010, '2022-11-15', '2022-11-18');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 120110520250010, '2022-11-20', '2022-10-26');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('SteelA20042020', 120100309260010, '2022-11-20', '2022-10-26');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 120200201190027, '2022-11-25', '2022-11-27');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 120180401230027, '2022-11-27', '2022-11-29');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 119001713120000, '2022-11-29', '2022-12-01');
+
 /*17*/
 UPDATE instructor 
 SET department = "CICS" 
