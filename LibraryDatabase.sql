@@ -64,7 +64,7 @@ CREATE TABLE equipment(
 );
 /*1e*/
 CREATE TABLE borrow (
-    borrow_id VARCHAR(10) AUTO_INCREMENT,
+    borrow_id int AUTO_INCREMENT,
     item_id VARCHAR(100) NOT NULL,
 	borrower_id VARCHAR(15) NOT NULL,
 	start_date DATE NOT NULL,
