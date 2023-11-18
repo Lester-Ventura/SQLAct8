@@ -81,29 +81,12 @@ CREATE TABLE borrow (
 );
 /*1f*/
 CREATE TABLE room (
-    room_id INT NOT NULL,
+    room_id VARCHAR(15) NOT NULL,
     max_capacity INT NOT NULL,
     room_type ENUM("Multimedia", "Discussion") NOT NULL,
     PRIMARY KEY(room_id)
 );
-/*1f*/
- CREATE TABLE room_usage (
-	usage_id INT AUTO_INCREMENT,
-	room_id INT NOT NULL,
-	user_id VARCHAR(15) NOT NULL,
-	start_timestamp DATETIME NOT NULL,
-	end_timestamp DATETIME,
-    PRIMARY KEY(usage_id),
-	FOREIGN KEY(room_id)
-			REFERENCES room(room_id)
-			ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(user_id)
-			REFERENCES student(student_id)
-			ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(user_id)
-			REFERENCES instructor(instructor_id)
-			ON DELETE CASCADE ON UPDATE CASCADE
-);
+
 /*2*/
 INSERT INTO student (student_id, last_name, first_name, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220319000001, "Cruzat", "Slaybells Batumbakal", "Consunji St., San Jose, City of San Fernando, Pampanga", "Padre Rada St., Tondo, Manila", 09060938294, "cruzat.slaybellsbatumbakal.student@yuste.edu", "2003-12-19", "BSCS", 2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220410110002, "Dough", "Jongin", "K", "Cadena de Amor St., Pembo, Taguig", "J. Luna, Matandang Balara, Quezon City", 09089923673, "dough.jongin.student@yuste.edu", "2004-01-03", "BSCS", 2022)
