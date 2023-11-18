@@ -70,8 +70,6 @@ CREATE TABLE borrow (
 	start_date DATE NOT NULL,
 	end_date DATE, 
 	PRIMARY KEY(borrow_id),
-	FOREIGN KEY (item_id) 
-		REFERENCES book(book_id),
 	FOREIGN KEY(borrower_id)
 		REFERENCES student(student_id)
 		ON DELETE CASCADE ON UPDATE CASCADE,
