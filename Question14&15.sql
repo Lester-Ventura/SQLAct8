@@ -13,9 +13,9 @@ LEFT JOIN book on bor.item_id = book.book_id
 -- # 15
 SELECT
 	i.instructor_id as instructor_id,
-i.instructor_last_name as instructor_ln,
-i.instructor_first_name as instructor_fn,
-COUNT(bor.item_id) as borrow_count
+	i.instructor_last_name as instructor_ln,
+	i.instructor_first_name as instructor_fn,
+	COUNT(bor.item_id) as borrow_count
 FROM 
 	Instructor i
 	LEFT JOIN borrow bor on i.instructor_id = bor.item_id
