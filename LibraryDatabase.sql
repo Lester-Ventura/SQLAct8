@@ -194,7 +194,16 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,1202
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180401230027,'2022-11-05 15:00:00','2022-11-05 18:00:00')
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00')
 /*12*/
-SELECT s.student_id, s.first_name as StudentName from student s 
+SELECT
+    CONCAT(s.last_name, ', ', s.first_name) AS "Student",
+    bk.book_title AS "Book Title",
+    CONCAT(bk.book_author_last_name, ', ', bk.book_author_first_name) AS "Book Author",
+    CONCAT(b.start_date, ' - ', b.end_date) AS "Borrowing Dates"
+	FROM student s
+LEFT JOIN borrow b
+	ON s.student_id = b.borrower_id
+LEFT JOIN book bk
+	ON b.item_id = bk.book_id;
 /*14 Doesn't Work*/
 SELECT
 		s.student_id, 
