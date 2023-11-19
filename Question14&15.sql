@@ -1,14 +1,13 @@
 --@etdvprg and @Vladifish
 -- # 14
 SELECT
-		s.student_id, 
-		S.first_name, 
-		S.last_name,
-		COUNT(*) AS Total Borrowed Books
+    s.student_id,
+    CONCAT(s.last_name, ', ', s.first_name) AS "Student",
+    COUNT(b.item_id) AS "Borrowed Books"
 FROM
-	Student s
-LEFT JOIN borrow on s.student_id = b.borrower_id
-LEFT JOIN book on bor.item_id = book.book_id
+    student s
+LEFT JOIN
+    borrow b ON s.student_id = b.borrower_id
 
 -- # 15
 SELECT
