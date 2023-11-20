@@ -272,7 +272,7 @@ SELECT
     left join instructor ins on bor.borrower_id = ins.instructor_id 
     order by rm.room_id;
 
-/*18*/ --@etdvprg
+/*19*/ --@etdvprg
 SELECT
     b.borrow_id,
     b.item_id,
