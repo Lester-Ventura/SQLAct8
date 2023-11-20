@@ -100,7 +100,7 @@ INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, pe
 /*4*/ --@Vladifish
 SELECT * FROM instructor i WHERE i.department = "CICS";
 
-/*5*/
+/*5*/ --@etdvprg, @casscodes22o
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("GreatF19252007", "The Great Gatsby", "Fitzgerald", "Francis Scott", "1925-04-10", 2007, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("WhiteL19062010", "White Fang", "London", "Jack", "1906-05-01", 2010, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("BFGD19822009", "The BFG", "Dahl", "Roald", "1982-01-14", 2009, 5);
@@ -120,7 +120,8 @@ INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_n
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('StormM20002013', 'A Storm of Swords', 'George R.R.', 'Martin', '2000-08-08', 2013, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('FeastM20052014', 'A Feast for Crows', 'George R.R.', 'Martin', '2005-10-17', 2014, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('DanceM20112014', 'A Dance with Dragons', 'George R.R.', 'Martin', '2011-07-12', 2014, 5);
-/*6*/
+
+/*6*/ --@Vladifish
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-00100", "Vacuum", 1400, 40, "Hoover")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-02077", "Vacuum", 2077, 2, "Roomba")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("OVEN-32145", "Oven", 2000, 20, "Industrial Oven")
@@ -131,7 +132,8 @@ INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_qua
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("MOUS-82887", "Mouse", 1346, 1000, "Dagang Costa")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("SJBL-42000", "Speaker", 2014, 40, "JBL 01")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("MRSL-00007", "Speaker", 2010, 30, "Marshall Stanmore");
-/*7*/
+
+/*7*/ --@Vladifish
 SELECT * FROM equipment 
 WHERE equipment_type = "Vacuum";
 SELECT * FROM equipment 
@@ -142,7 +144,8 @@ SELECT * FROM equipment
 WHERE equipment_type = "Mouse";
 SELECT * FROM equipment 
 WHERE equipment_type = "Speaker";
-/*8*/
+
+/*8*/ --@miggy-v, @casscodes220
 INSERT INTO room (room_id, max_capacity, room_type) VALUES (101,30,'Multimedia');
 INSERT into room (room_id, max_capacity, room_type) values (102,35,'Multimedia');
 INSERT into room (room_id, max_capacity, room_type) values (103,50,'Multimedia');
@@ -153,8 +156,8 @@ INSERT into room (room_id, max_capacity, room_type) values (107,65,'Discussion')
 INSERT into room (room_id, max_capacity, room_type) values (108,70,'Discussion');
 INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion');
 INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
-/*9*/
-/*students*/
+
+/*9*/ --@miggy-v, @casscodes220
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020220319000001, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('BFGD19822009', 020220410110002, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('JaneB18472006', 020220410110002, '2022-10-22', '2022-10-25');
@@ -180,7 +183,6 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO199
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 020220418060008, '2022-11-12', '2022-11-15');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 020220124200010, '2022-11-15', '2022-11-18');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020220124200010, '2022-11-15', '2022-11-18');
-/*instructors, pwede ba gantong syntax or itulad ko sa previous? --casscodes22o*/
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) 
 VALUES 
 	('StormM20002013', 120180401230027, '2022-11-20', '2022-10-26'),
@@ -189,19 +191,22 @@ VALUES
 	('VentoA19952018', 120171408106968, '2022-11-27', '2022-11-29'),
 	('MeinH19252020', 120180316046996, '2022-11-27', '2022-11-29'),
 	('QuantumK20232023', 120150401036668, '2022-11-22', '2022-12-01');
-/*10*/
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("VACM-02077", 120110520250010, '2022-11-02', '2022-12-01');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("OVEN-32145", 120100309260010, '2022-11-03', '2022-11-16');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("LNVO-27172", 120200201190027, '2022-11-04', '2022-11-20');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("LGTC-24123", 120180401230027, '2022-11-05', '2022-11-23');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("SJBL-42000", 119001713120000, '2022-11-06', '2022-11-24');
+
+/*10*/ --@etdvprg
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('MRSL-00007', '020221114030002', "2023-02-10", "2023-03-20");
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('OVEN-42068', '120150401036668', "2023-01-20", "2023-03-20");
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('EPIC-12027', '120100309260010', "2023-02-16", "2023-07-09");
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('MOUS-82887', '020220410110003', "2023-05-10", "2023-06-22");
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('VACM-02077', '020221601110006', "2022-07-10", "2022-07-22");
+
 /*11*/
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (101,120110520250010,'2022-11-02 11:00:00','2022-11-02 13:00:00')
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (102,120100309260010,'2022-11-03 09:00:00','2022-11-03 12:00:00')
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,120200201190027,'2022-11-04 14:00:00','2022-11-04 16:00:00')
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180401230027,'2022-11-05 15:00:00','2022-11-05 18:00:00')
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00')
-/*12*/
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (101,120110520250010,'2022-11-02 11:00:00','2022-11-02 13:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (102,120100309260010,'2022-11-03 09:00:00','2022-11-03 12:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,120200201190027,'2022-11-04 14:00:00','2022-11-04 16:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180401230027,'2022-11-05 15:00:00','2022-11-05 18:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00');
+	
+/*12*/ --@etdvprg
 SELECT
     CONCAT(s.last_name, ', ', s.first_name) AS "Student",
     bk.book_title AS "Book Title",
@@ -212,9 +217,10 @@ LEFT JOIN borrow b
 	ON s.student_id = b.borrower_id
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
-/*13*/
+
+/*13*/ --@casscodes220
 SELECT
-	CONCAT(i.last_name, ', ', i.first_name) AS "Instructor",
+    CONCAT(i.last_name, ', ', i.first_name) AS "Instructor",
     bk.book_title AS "Book Title",
     CONCAT(bk.book_author_last_name, ', ', bk.book_author_first_name) AS "Book Author",
     CONCAT(b.start_date, ' - ', b.end_date) AS "Borrowing Dates"
@@ -223,18 +229,18 @@ LEFT JOIN borrow b
 	ON i.instructor_id = b.borrower_id
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
-/*14 Doesn't Work*/
+
+/*14*/ --@etdvprg
 SELECT
-		s.student_id, 
-		S.first_name, 
-		S.last_name,
-		COUNT(*) AS TotalBorrowedBooks
+    s.student_id,
+    CONCAT(s.last_name, ', ', s.first_name) AS "Student",
+    COUNT(b.item_id) AS "Borrowed Books"
 FROM
-	Student s
-LEFT JOIN borrow bor on s.student_id = bor.borrower_id
-LEFT JOIN book b on bor.item_id = b.book_id
-group by s.student_id
-/*15 Doesn't Work*/
+    student s
+LEFT JOIN
+    borrow b ON s.student_id = b.borrower_id
+
+/*15 Doesn't Work*/ --@Vladifish
 SELECT
 i.instructor_id,
 i.last_name as instructor_ln,
@@ -246,14 +252,14 @@ FROM
 	LEFT JOIN book on bor.item_id = book.book_id
 GROUP BY i.instructor_id
 
-
-/*17*/
+/*17*/ --@miggy-v
 UPDATE instructor 
 SET department = "CICS" 
 WHERE instructor_id = "120100309260010";
 SELECT * FROM instructor 
 WHERE department = "CICS";
-/*18*/
+
+/*18*/ --@Vladifish
 SELECT 
     rm.room_id,
     bor.borrower_id,
