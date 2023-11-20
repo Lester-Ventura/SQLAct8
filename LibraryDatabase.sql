@@ -217,6 +217,7 @@ LEFT JOIN borrow b
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
 	where Book_title is not null;
+
 /*13*/ --@casscodes220
 SELECT
     CONCAT(i.last_name, ', ', i.first_name) AS "Instructor",
@@ -229,16 +230,23 @@ LEFT JOIN borrow b
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
 	where bk.book_title is not null;
+
 /*14 $*/ --@etdvprg
 SELECT
     s.student_id,
     CONCAT(s.last_name, ', ', s.first_name) AS "Student",
     COUNT(b.item_id) AS "Borrowed Books"
+    COUNT(bk.book_id) AS "Borrowed Books"
 FROM
     student s
 LEFT JOIN
     borrow b ON s.student_id = b.borrower_id
-group by s.student_id;
+LEFT JOIN
+	book bk ON bk.book_id = b.item_id
+WHERE
+	b.item_id = book_id
+    book bk ON bk.book_id = b.item_id
+GROUP BY s.student_id;
 
 /*15*/ 
 -- @Vladifish
