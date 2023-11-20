@@ -151,6 +151,7 @@ INSERT into room (room_id, max_capacity, room_type) values (108,70,'Discussion')
 INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion');
 INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
 /*9*/
+/*students*/
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020220319000001, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('BFGD19822009', 020220410110002, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('JaneB18472006', 020220410110002, '2022-10-22', '2022-10-25');
@@ -176,11 +177,15 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO199
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 020220418060008, '2022-11-12', '2022-11-15');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 020220124200010, '2022-11-15', '2022-11-18');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020220124200010, '2022-11-15', '2022-11-18');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 120110520250010, '2022-11-20', '2022-10-26');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('SteelA20042020', 120100309260010, '2022-11-20', '2022-10-26');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF19252007', 120200201190027, '2022-11-25', '2022-11-27');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 120180401230027, '2022-11-27', '2022-11-29');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('FeastM20052014', 119001713120000, '2022-11-29', '2022-12-01');
+/*instructors, pwede ba gantong syntax or itulad ko sa previous? --casscodes22o*/
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) 
+VALUES 
+	('StormM20002013', 120180401230027, '2022-11-20', '2022-10-26'),
+	('SteelA20042020', 120100309260010, '2022-11-20', '2022-10-26'),
+	('GreatF19252007', 120200201190027, '2022-11-25', '2022-11-27'),
+	('VentoA19952018', 120171408106968, '2022-11-27', '2022-11-29'),
+	('MeinH19252020', 120180316046996, '2022-11-27', '2022-11-29'),
+	('QuantumK20232023', 120150401036668, '2022-11-22', '2022-12-01');
 /*10*/
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("VACM-02077", 120110520250010, '2022-11-02', '2022-12-01');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ("OVEN-32145", 120100309260010, '2022-11-03', '2022-11-16');
