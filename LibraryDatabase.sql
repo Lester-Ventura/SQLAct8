@@ -209,6 +209,17 @@ LEFT JOIN borrow b
 	ON s.student_id = b.borrower_id
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
+/*13*/
+SELECT
+	CONCAT(i.last_name, ', ', i.first_name) AS "Instructor",
+    bk.book_title AS "Book Title",
+    CONCAT(bk.book_author_last_name, ', ', bk.book_author_first_name) AS "Book Author",
+    CONCAT(b.start_date, ' - ', b.end_date) AS "Borrowing Dates"
+	FROM instructor i
+LEFT JOIN borrow b
+	ON i.instructor_id = b.borrower_id
+LEFT JOIN book bk
+	ON b.item_id = bk.book_id;
 /*14 Doesn't Work*/
 SELECT
 		s.student_id, 
