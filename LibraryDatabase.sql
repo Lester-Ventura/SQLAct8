@@ -1,4 +1,3 @@
-/*Ctrl +F Doesn't Work to find wrong queries*/
 /*TableDroppersDeleters*/
 delete student
 delete book
@@ -12,7 +11,7 @@ drop table instructor
 drop table equipment
 drop table room
 drop table book;
-/*1a*/
+/*1a $*/
 CREATE TABLE student (
     student_id VARCHAR(15),
     last_name VARCHAR(50) NOT NULL,
@@ -27,7 +26,7 @@ CREATE TABLE student (
     enrollment_year INT,
     PRIMARY KEY(student_id)
 );
-/*1b*/
+/*1b $*/
 CREATE TABLE instructor(
 	instructor_id VARCHAR(15),
     last_name VARCHAR(50) NOT NULL,
@@ -42,7 +41,7 @@ CREATE TABLE instructor(
     service_commencement DATE,
     PRIMARY KEY(instructor_id)	
 );
-/*1c*/
+/*1c $*/
 CREATE TABLE book(
 book_id VARCHAR(100) PRIMARY KEY NOT NULL,
 book_title VARCHAR(50),
@@ -51,7 +50,7 @@ Book_author_first_name VARCHAR(50),
 book_pubdate DATE,
 book_acqyear INT,
 book_qty INT);
-/*1d*/
+/*1d $*/
 CREATE TABLE equipment(
     equipment_id VARCHAR(10) NOT NULL,
     equipment_type VARCHAR(100) NOT NULL,
@@ -60,7 +59,7 @@ CREATE TABLE equipment(
 	model_type VARCHAR(50) NOT NULL,
     PRIMARY KEY(equipment_id)	
 );
-/*1e*/
+/*1e $*/
 CREATE TABLE borrow (
     borrow_id INT AUTO_INCREMENT,
     item_id VARCHAR(100) NOT NULL,
@@ -69,7 +68,7 @@ CREATE TABLE borrow (
 	end_date DATETIME, 
 	PRIMARY KEY(borrow_id)
 );
-/*1f*/
+/*1f $*/
 CREATE TABLE room (
     room_id VARCHAR(15) NOT NULL,
     max_capacity INT NOT NULL,
@@ -77,7 +76,7 @@ CREATE TABLE room (
     PRIMARY KEY(room_id)
 );
 
-/*2*/ --@etdvprg, @miggy-v, @Lester-Ventura
+/*2 $*/ --@etdvprg, @miggy-v, @Lester-Ventura
 INSERT INTO student (student_id, last_name, first_name, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220319000001, "Cruzat", "Slaybells Batumbakal", "Consunji St., San Jose, City of San Fernando, Pampanga", "Padre Rada St., Tondo, Manila", 09060938294, "cruzat.slaybells.student@yuste.edu", "2003-12-19", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020221114030002, "Kim", "Nayeon", "C", "Balantang Road, Jaro, Iloilo City, Iloilo", "Filinvest Ave., Alabang, Muntinlupa", 09009533694, "kim.nayeon.student@yuste.edu", "2004-02-16", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220410110003, "Doh", "Jongin", "K", "Cadena de Amor St., Pembo, Taguig", "J. Luna, Matandang Balara, Quezon City", 09089923673, "doh.jongin.student@yuste.edu", "2005-01-03", "BSCS", 2022);
@@ -89,7 +88,7 @@ INSERT INTO student (student_id, last_name, first_name, middle_initial, permanen
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220713210009,"Grud","Miupo","U","San Miguel Ave., Santolan, Pasig City","Capetown St., San Isidro, Pasig City",09738451836,"grud.miupo.student@yuste.edu","2003-01-01","BSCS",2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220124200010,"Astap","Xing","T","Llorente St., Don Julio, Cebu City","Bonifacio St., Balsigan, Baguio, Benguet",09827351845,"astap.xing.student@yuste.edu","2002-09-09","BSCS",2022);
 
-/*3*/ --@etdvprg, @casscodes22o
+/*3 $*/ --@etdvprg, @casscodes22o
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180401230005, "De Silva", "Ana Gabriela", "V" , "Rua do Herval, Cristo Rei, Curitiba, Paraná, Brazil", "Amapola St., Bel-Air Village, Makati", 09159078348, "dsanagab.intl.faculty@yuste.edu", "1980-8-19", "AB", "2018-8-26");
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120200201190018, "Bari", "Abdul", "S", "Abid Ali Road, Hyderabad, Telangana, India", "Quirino Avenue Ext., Paco, Manila", 09123471945, "abaris.intl.faculty@yuste.edu", "1965-02-10", "CICS", "2020-03-14");
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120100309260010, "Camacho", "Jhon Mhiguel", "Z", "Nuvali Boulevard, Don Jose, Santa Rosa, Laguna", "Padre Noval, Sampaloc, Manila", 09789218374, "jhnmgc.cfad.faculty@yuste.edu", "1979-11-11", "CFAD", "2010-08-23");
@@ -97,10 +96,10 @@ INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, pe
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120150401036668, "Darby", "Albert", "C", "M.L. Quezon Ave, Casutingan, Mandaue City, Cebu", "855 Padre Campa, Sampaloc, Manila", 09255678945, "darberto.eng.faculty@yuste.edu", "1975-10-05", "ENG", "2015-02-11");
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120171408106968, "Nieves", "Harry", "J", "Annalyn Street, Kumintang Ibaba, Batangas City, Batangas", "423 Lacson, Sampaloc, Manila", 09136942045, "hnieves.amv.faculty@yuste.edu", "1975-10-05", "AMV", "2017-04-17");
 
-/*4*/ --@Vladifish
+/*4 $*/ --@Vladifish
 SELECT * FROM instructor i WHERE i.department = "CICS";
 
-/*5*/ --@etdvprg, @casscodes22o
+/*5 $*/ --@etdvprg, @casscodes22o
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("GreatF19252007", "The Great Gatsby", "Fitzgerald", "Francis Scott", "1925-04-10", 2007, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("WhiteL19062010", "White Fang", "London", "Jack", "1906-05-01", 2010, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("BFGD19822009", "The BFG", "Dahl", "Roald", "1982-01-14", 2009, 5);
@@ -121,7 +120,7 @@ INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_n
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('FeastM20052014', 'A Feast for Crows', 'George R.R.', 'Martin', '2005-10-17', 2014, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('DanceM20112014', 'A Dance with Dragons', 'George R.R.', 'Martin', '2011-07-12', 2014, 5);
 
-/*6*/ --@Vladifish
+/*6 $*/ --@Vladifish
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-00100", "Vacuum", 1400, 40, "Hoover")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-02077", "Vacuum", 2077, 2, "Roomba")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("OVEN-32145", "Oven", 2000, 20, "Industrial Oven")
@@ -133,7 +132,7 @@ INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_qua
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("SJBL-42000", "Speaker", 2014, 40, "JBL 01")
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("MRSL-00007", "Speaker", 2010, 30, "Marshall Stanmore");
 
-/*7*/ --@Vladifish
+/*7 $*/ --@Vladifish
 SELECT * FROM equipment 
 WHERE equipment_type = "Vacuum";
 SELECT * FROM equipment 
@@ -145,7 +144,7 @@ WHERE equipment_type = "Mouse";
 SELECT * FROM equipment 
 WHERE equipment_type = "Speaker";
 
-/*8*/ --@miggy-v, @casscodes220
+/*8 $*/ --@miggy-v, @casscodes220
 INSERT INTO room (room_id, max_capacity, room_type) VALUES (101,30,'Multimedia');
 INSERT into room (room_id, max_capacity, room_type) values (102,35,'Multimedia');
 INSERT into room (room_id, max_capacity, room_type) values (103,50,'Multimedia');
@@ -157,7 +156,7 @@ INSERT into room (room_id, max_capacity, room_type) values (108,70,'Discussion')
 INSERT into room (room_id, max_capacity, room_type) values (109,40,'Discussion');
 INSERT into room (room_id, max_capacity, room_type) values (110,40,'Discussion');
 
-/*9*/ --@miggy-v, @casscodes220
+/*9 $*/ --@miggy-v, @casscodes220
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('StormM20002013', 020220319000001, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('BFGD19822009', 020220410110002, '2022-10-19', '2022-10-22');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('JaneB18472006', 020220410110002, '2022-10-22', '2022-10-25');
@@ -192,21 +191,21 @@ VALUES
 	('MeinH19252020', 120180316046996, '2022-11-27', '2022-11-29'),
 	('QuantumK20232023', 120150401036668, '2022-11-22', '2022-12-01');
 
-/*10*/ --@etdvprg
+/*10 $*/ --@etdvprg
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('MRSL-00007', '020221114030002', "2023-02-10", "2023-03-20");
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('OVEN-42068', '120150401036668', "2023-01-20", "2023-03-20");
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('EPIC-12027', '120100309260010', "2023-02-16", "2023-07-09");
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('MOUS-82887', '020220410110003', "2023-05-10", "2023-06-22");
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('VACM-02077', '020221601110006', "2022-07-10", "2022-07-22");
 
-/*11*/
+/*11 $*/
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (101,120110520250010,'2022-11-02 11:00:00','2022-11-02 13:00:00');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (102,120100309260010,'2022-11-03 09:00:00','2022-11-03 12:00:00');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,120200201190027,'2022-11-04 14:00:00','2022-11-04 16:00:00');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180401230027,'2022-11-05 15:00:00','2022-11-05 18:00:00');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00');
 	
-/*12*/ --@etdvprg
+/*12 $*/ --@etdvprg
 SELECT
     CONCAT(s.last_name, ', ', s.first_name) AS "Student",
     bk.book_title AS "Book Title",
@@ -217,7 +216,7 @@ LEFT JOIN borrow b
 	ON s.student_id = b.borrower_id
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
-
+	where Book_title is not null;
 /*13*/ --@casscodes220
 SELECT
     CONCAT(i.last_name, ', ', i.first_name) AS "Instructor",
@@ -229,8 +228,8 @@ LEFT JOIN borrow b
 	ON i.instructor_id = b.borrower_id
 LEFT JOIN book bk
 	ON b.item_id = bk.book_id;
-
-/*14*/ --@etdvprg
+	where bk.book_title is not null;
+/*14 $*/ --@etdvprg
 SELECT
     s.student_id,
     CONCAT(s.last_name, ', ', s.first_name) AS "Student",
@@ -239,7 +238,7 @@ FROM
     student s
 LEFT JOIN
     borrow b ON s.student_id = b.borrower_id
-
+group by s.student_id;
 /*15 Doesn't Work*/ --@Vladifish
 SELECT
 i.instructor_id,
