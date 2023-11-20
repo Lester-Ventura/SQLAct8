@@ -235,18 +235,12 @@ LEFT JOIN book bk
 SELECT
     s.student_id,
     CONCAT(s.last_name, ', ', s.first_name) AS "Student",
-    COUNT(b.item_id) AS "Borrowed Books"
     COUNT(bk.book_id) AS "Borrowed Books"
-FROM
-    student s
-LEFT JOIN
-    borrow b ON s.student_id = b.borrower_id
-LEFT JOIN
-	book bk ON bk.book_id = b.item_id
-WHERE
-	b.item_id = book_id
-    book bk ON bk.book_id = b.item_id
-GROUP BY s.student_id;
+FROM student s
+LEFT JOIN borrow b
+	ON s.student_id = b.borrower_id
+LEFT JOIN book bk
+	ON b.item_id = bk.book_id;
 
 /*15*/ 
 -- @Vladifish
