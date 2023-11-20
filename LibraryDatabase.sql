@@ -89,12 +89,12 @@ INSERT INTO student (student_id, last_name, first_name, middle_initial, permanen
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220124200010,"Astap","Xing","T","Llorente St., Don Julio, Cebu City","Bonifacio St., Balsigan, Baguio, Benguet",09827351845,"astap.xing.student@yuste.edu","2002-09-09","BSCS",2022);
 
 /*3 $*/ --@etdvprg, @casscodes22o
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180401230005, "De Silva", "Ana Gabriela", "V" , "Rua do Herval, Cristo Rei, Curitiba, Paraná, Brazil", "Amapola St., Bel-Air Village, Makati", 09159078348, "dsanagab.intl.faculty@yuste.edu", "1980-8-19", "AB", "2018-8-26");
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120200201190018, "Bari", "Abdul", "S", "Abid Ali Road, Hyderabad, Telangana, India", "Quirino Avenue Ext., Paco, Manila", 09123471945, "abaris.intl.faculty@yuste.edu", "1965-02-10", "CICS", "2020-03-14");
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120100309260010, "Camacho", "Jhon Mhiguel", "Z", "Nuvali Boulevard, Don Jose, Santa Rosa, Laguna", "Padre Noval, Sampaloc, Manila", 09789218374, "jhnmgc.cfad.faculty@yuste.edu", "1979-11-11", "CFAD", "2010-08-23");
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180316046996, "Cunk", "Philomena", "D", "2 Eccleston Street, Belgravia, London, United Kingdom", "32nd Street, Bonifacio Global City, Taguig", 09770900352, "philoinph.clsc.faculty@yuste.edu", "1975-10-05", "CLSC", "2018-04-03");
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120150401036668, "Darby", "Albert", "C", "M.L. Quezon Ave, Casutingan, Mandaue City, Cebu", "855 Padre Campa, Sampaloc, Manila", 09255678945, "darberto.eng.faculty@yuste.edu", "1975-10-05", "ENG", "2015-02-11");
-INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120171408106968, "Nieves", "Harry", "J", "Annalyn Street, Kumintang Ibaba, Batangas City, Batangas", "423 Lacson, Sampaloc, Manila", 09136942045, "hnieves.amv.faculty@yuste.edu", "1975-10-05", "AMV", "2017-04-17");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180401230001, "De Silva", "Ana Gabriela", "V" , "Rua do Herval, Cristo Rei, Curitiba, Paraná, Brazil", "Amapola St., Bel-Air Village, Makati", 09159078348, "dsanagab.intl.faculty@yuste.edu", "1980-08-19", "AB", "2018-08-26");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120200201190002, "Bari", "Abdul", "S", "Abid Ali Road, Hyderabad, Telangana, India", "Quirino Avenue Ext., Paco, Manila", 09123471945, "abaris.intl.faculty@yuste.edu", "1965-02-10", "CICS", "2020-03-14");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120100309260003, "Camacho", "Jhon Mhiguel", "Z", "Nuvali Boulevard, Don Jose, Santa Rosa, Laguna", "Padre Noval, Sampaloc, Manila", 09789218374, "jhnmgc.cfad.faculty@yuste.edu", "1979-11-11", "CFAD", "2010-08-23");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120180316040004, "Cunk", "Philomena", "D", "2 Eccleston Street, Belgravia, London, United Kingdom", "32nd Street, Bonifacio Global City, Taguig", 09770900352, "philoinph.clsc.faculty@yuste.edu", "1975-10-05", "CLSC", "2018-04-03");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120150401030005, "Darby", "Albert", "C", "M.L. Quezon Ave, Casutingan, Mandaue City, Cebu", "855 Padre Campa, Sampaloc, Manila", 09255678945, "darberto.eng.faculty@yuste.edu", "1975-10-05", "ENG", "2015-02-11");
+INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120171408100006, "Nieves", "Harry", "J", "Annalyn Street, Kumintang Ibaba, Batangas City, Batangas", "423 Lacson, Sampaloc, Manila", 09136942045, "hnieves.amv.faculty@yuste.edu", "1975-10-05", "AMV", "2017-04-17");
 
 /*4 $*/ --@Vladifish
 SELECT * FROM instructor i WHERE i.department = "CICS";
@@ -184,12 +184,12 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('GreatF1
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('TwoO19972021', 020220124200010, '2022-11-15', '2022-11-18');
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) 
 VALUES 
-	('StormM20002013', 120180401230027, '2022-11-20', '2022-10-26'),
-	('SteelA20042020', 120100309260010, '2022-11-20', '2022-10-26'),
-	('GreatF19252007', 120200201190027, '2022-11-25', '2022-11-27'),
-	('VentoA19952018', 120171408106968, '2022-11-27', '2022-11-29'),
-	('MeinH19252020', 120180316046996, '2022-11-27', '2022-11-29'),
-	('QuantumK20232023', 120150401036668, '2022-11-22', '2022-12-01');
+	('StormM20002013', 120180401230001, '2022-11-20', '2022-10-26'),
+	('SteelA20042020', 120200201190002, '2022-11-20', '2022-10-26'),
+	('GreatF19252007', 120100309260003, '2022-11-25', '2022-11-27'),
+	('VentoA19952018', 120180316040004, '2022-11-27', '2022-11-29'),
+	('MeinH19252020', 120171408100006, '2022-11-27', '2022-11-29'),
+	('QuantumK20232023', 120150401030005, '2022-11-22', '2022-12-01');
 
 /*10 $*/ --@etdvprg
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('MRSL-00007', '020221114030002', "2023-02-10", "2023-03-20");
@@ -199,11 +199,11 @@ INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('MOUS-82
 INSERT INTO borrow (item_id, borrower_id, start_date, end_date) VALUES ('VACM-02077', '020221601110006', "2022-07-10", "2022-07-22");
 
 /*11 $*/
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (101,120110520250010,'2022-11-02 11:00:00','2022-11-02 13:00:00');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (102,120100309260010,'2022-11-03 09:00:00','2022-11-03 12:00:00');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,120200201190027,'2022-11-04 14:00:00','2022-11-04 16:00:00');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180401230027,'2022-11-05 15:00:00','2022-11-05 18:00:00');
-INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,119001713120000,'2022-11-06 13:00:00','2022-11-06 16:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (101,120180401230001,'2022-11-02 11:00:00','2022-11-02 13:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (102,120200201190002,'2022-11-03 09:00:00','2022-11-03 12:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (103,120100309260003,'2022-11-04 14:00:00','2022-11-04 16:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (104,120180316040004,'2022-11-05 15:00:00','2022-11-05 18:00:00');
+INSERT INTO borrow (item_id, borrower_id, start_date, end_date) values (105,120150401030005,'2022-11-06 13:00:00','2022-11-06 16:00:00');
 	
 /*12 $*/ --@etdvprg
 SELECT
@@ -254,7 +254,7 @@ GROUP BY i.instructor_id
 /*17*/ --@miggy-v
 UPDATE instructor 
 SET department = "CICS" 
-WHERE instructor_id = "120100309260010";
+WHERE instructor_id = "120180401230001";
 SELECT * FROM instructor 
 WHERE department = "CICS";
 
