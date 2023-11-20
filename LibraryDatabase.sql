@@ -97,8 +97,9 @@ INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, pe
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120150401036668, "Darby", "Albert", "C", "M.L. Quezon Ave, Casutingan, Mandaue City, Cebu", "855 Padre Campa, Sampaloc, Manila", 09255678945, "darberto.eng.faculty@yuste.edu", "1975-10-05", "ENG", "2015-02-11");
 INSERT INTO instructor (instructor_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, department, service_commencement) VALUES (120171408106968, "Nieves", "Harry", "J", "Annalyn Street, Kumintang Ibaba, Batangas City, Batangas", "423 Lacson, Sampaloc, Manila", 09136942045, "hnieves.amv.faculty@yuste.edu", "1975-10-05", "AMV", "2017-04-17");
 
-/*4*/
+/*4*/ --@Vladifish
 SELECT * FROM instructor i WHERE i.department = "CICS";
+
 /*5*/
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("GreatF19252007", "The Great Gatsby", "Fitzgerald", "Francis Scott", "1925-04-10", 2007, 5);
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ("WhiteL19062010", "White Fang", "London", "Jack", "1906-05-01", 2010, 5);
