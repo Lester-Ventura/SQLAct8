@@ -239,17 +239,18 @@ FROM
 LEFT JOIN
     borrow b ON s.student_id = b.borrower_id
 group by s.student_id;
-/*15 Doesn't Work*/ --@Vladifish
+
+/*15 */ 
+-- @Vladifish
 SELECT
-i.instructor_id,
-i.last_name as instructor_ln,
-i.first_name as instructor_fn,
-COUNT(bor.item_id) as borrow_count
+	i.instructor_id,
+	CONCAT(i.last_name, ', ', i.first_name) AS "Professor",
+	COUNT(bk.book_id) as borrow_count 
 FROM 
 	Instructor i
-	LEFT JOIN borrow bor on i.instructor_id = bor.item_id
-	LEFT JOIN book on bor.item_id = book.book_id
-GROUP BY i.instructor_id
+	LEFT JOIN borrow bor on i.instructor_id = bor.borrower_id
+	LEFT JOIN book bk on bor.item_id = bk.book_id
+GROUP BY i.instructor_id;
 
 /*17*/ --@miggy-v
 UPDATE instructor 
