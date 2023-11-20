@@ -24,4 +24,4 @@ FROM
         LEFT JOIN book bk on bk.book_id = bor.item_id
         LEFT JOIN equipment e on e.equipment_id = bor.item_id 
         LEFT JOIN room r on r.room_id = bor.item_id 
-    ) as lib
+    ) as lib;
