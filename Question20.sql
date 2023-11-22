@@ -14,7 +14,7 @@ borrow (item_id, borrower_id, start_date, end_date)
 		FROM (
 			SELECT
 			user.user_id,
-			count(user_id) as borrow_count
+			count(bor.item_id) as borrow_count
 				FROM (
 				SELECT 
 					i.instructor_id as user_id
@@ -24,9 +24,9 @@ borrow (item_id, borrower_id, start_date, end_date)
 					s.student_id
 				FROM student s
 			) as user
-			  LEFT JOIN borrow bor on bor.borrower_id = user.user_id 
+			  LEFT JOIN borrow bor on bor.borrower_id = user.user_id and bor.end_date > '2023-11-19'
 			  LEFT JOIN book bk on bk.book_id = bor.item_id 
-			  WHERE user.user_id = 120200201190002 and bk.book_id = bor.item_id 
+			  WHERE user.user_id = 120200201190002 and (bk.book_id = bor.item_id or bor.item_id is null)
 			  GROUP BY user.user_id
 		) AS checked_user
 		CROSS JOIN (
@@ -37,8 +37,8 @@ borrow (item_id, borrower_id, start_date, end_date)
 			FROM book bk
 			LEFT JOIN 
 				borrow bor on bor.item_id = book_id 
-				AND bor.end_date > '2022-11-01'
-				WHERE bor.item_id = "VentoA19952018"
+				AND bor.end_date > '2023-11-19'
+				WHERE bor.item_id = "VentoA19952018" or (bor.item_id is null and bk.book_id = "VentoA19952018")
 				GROUP BY book_id
 		) AS checked_book
 		WHERE checked_user.borrow_count < 3 AND checked_book.times_borrowed < checked_book.book_qty
