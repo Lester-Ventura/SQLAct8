@@ -82,9 +82,9 @@ INSERT INTO student (student_id, last_name, first_name, middle_initial, permanen
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220410110003, "Doh", "Jongin", "K", "Cadena de Amor St., Pembo, Taguig", "J. Luna, Matandang Balara, Quezon City", 09089923673, "doh.jongin.student@yuste.edu", "2005-01-03", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020220410010004, "Dela Cruz", "Juan", "A", "Gomez St., San Juan, Taytay, Rizal",  09162344567, "ja.delacruz.student@yuste.edu", "2003-12-19", "BSCS", 2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, contact_number, contact_email, birthdate, program, enrollment_year) VALUES (020221601110006, "Panganiban", "Axel Ronald", "K", "Vista Verde Ave., Santo Domingo, Cainta, Rizal", 09163526325, "ark.panganiban.student@yuste.edu", "2002-10-26", "BSCS", 2022);
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418070006,"Dan","Richardson","G","Jose St., Malibay, Pasay City","Mayapis St., Urdaneta, Makati City",09876954654,"dan.richardson.student@yuste.edu","2002-11-23","BSCS",2022)
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221205050007,"Laif","Efil","E","Roxas Ave., Abuno, Iligan, Lanao del Norte","Leveriza St., Rosario, Pasay City",09543678234,"laif.efil.student@yuste.edu","2003-01-13","BSCS",2022)
-INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418060008,"Descartes","Reyes","F","Don Jose St., Siena, Manila, Metro Manila","Luzuriaga St., Brgy. 12, Bacolod, Negros Occidental",09285649172,"descartes.reyes.student@yuste.edu","2002-10-04","BSCS",2022)
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418070006,"Dan","Richardson","G","Jose St., Malibay, Pasay City","Mayapis St., Urdaneta, Makati City",09876954654,"dan.richardson.student@yuste.edu","2002-11-23","BSCS",2022);
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020221205050007,"Laif","Efil","E","Roxas Ave., Abuno, Iligan, Lanao del Norte","Leveriza St., Rosario, Pasay City",09543678234,"laif.efil.student@yuste.edu","2003-01-13","BSCS",2022);
+INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220418060008,"Descartes","Reyes","F","Don Jose St., Siena, Manila, Metro Manila","Luzuriaga St., Brgy. 12, Bacolod, Negros Occidental",09285649172,"descartes.reyes.student@yuste.edu","2002-10-04","BSCS",2022);
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220713210009,"Grud","Miupo","U","San Miguel Ave., Santolan, Pasig City","Capetown St., San Isidro, Pasig City",09738451836,"grud.miupo.student@yuste.edu","2003-01-01","BSCS",2022)
 INSERT INTO student (student_id, last_name, first_name, middle_initial, permanent_address, current_address, contact_number, contact_email, birthdate, program, enrollment_year) values (020220124200010,"Astap","Xing","T","Llorente St., Don Julio, Cebu City","Bonifacio St., Balsigan, Baguio, Benguet",09827351845,"astap.xing.student@yuste.edu","2002-09-09","BSCS",2022);
 
@@ -121,15 +121,15 @@ INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_n
 INSERT INTO book(book_id, book_title, book_author_last_name, book_author_first_name, book_pubdate, book_acqyear, book_qty) VALUES ('DanceM20112014', 'A Dance with Dragons', 'George R.R.', 'Martin', '2011-07-12', 2014, 5);
 
 /*6 */ -- @Vladifish
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-00100", "Vacuum", 1400, 40, "Hoover")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-02077", "Vacuum", 2077, 2, "Roomba")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("OVEN-32145", "Oven", 2000, 20, "Industrial Oven")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("OVEN-42068", "Oven", 2003, 100, "Toaster Oven")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("LNVO-27172", "Laptop", 2017, 1000, "Lenovo Thinkpad")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("EPIC-12027", "Laptop", 1999, 1, "Kids Music Laptop")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("LGTC-24123", "Mouse", 2014, 30, "Logitech Gaming Mouse")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("MOUS-82887", "Mouse", 1346, 1000, "Dagang Costa")
-INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("SJBL-42000", "Speaker", 2014, 40, "JBL 01")
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-00100", "Vacuum", 1400, 40, "Hoover");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("VACM-02077", "Vacuum", 2077, 2, "Roomba");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("OVEN-32145", "Oven", 2000, 20, "Industrial Oven");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("OVEN-42068", "Oven", 2003, 100, "Toaster Oven");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("LNVO-27172", "Laptop", 2017, 1000, "Lenovo Thinkpad");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("EPIC-12027", "Laptop", 1999, 1, "Kids Music Laptop");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("LGTC-24123", "Mouse", 2014, 30, "Logitech Gaming Mouse");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("MOUS-82887", "Mouse", 1346, 1000, "Dagang Costa");
+INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("SJBL-42000", "Speaker", 2014, 40, "JBL 01");
 INSERT INTO equipment (equipment_id, equipment_type, acquisition_year, total_quantity,model_type) VALUES ("MRSL-00007", "Speaker", 2010, 30, "Marshall Stanmore");
 
 /*7 */ -- @Vladifish
