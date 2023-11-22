@@ -335,9 +335,8 @@ SELECT
 
 /*20*/ -- fisherman
 INSERT INTO 
-borrow (borrow_id, item_id, borrower_id, start_date, end_date)
+borrow (item_id, borrower_id, start_date, end_date)
 	SELECT 
-		38,
 		confirmed.book_id,
 		confirmed.user_id,
 		'2023-11-20',
